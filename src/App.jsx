@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 
-/* ─────────────────────────────────────────
-   GLOBAL STYLES
-───────────────────────────────────────── */
+/** Global styles, font imports and responsive breakpoints */
 const G = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap');
@@ -51,9 +49,7 @@ const G = () => (
   `}</style>
 );
 
-/* ─────────────────────────────────────────
-   SKILLS DATA
-───────────────────────────────────────── */
+/** Skills data — each entry renders as a card in the Skills section */
 const SKILLS = [
   {
     name: 'HTML5',
@@ -98,11 +94,7 @@ const SKILLS = [
   },
 ];
 
-/* ─────────────────────────────────────────
-   PROJECTS — hardcoded, only you can edit
-   To add a project: copy one object below
-   and fill in your details
-───────────────────────────────────────── */
+/** Projects data — add a new object to this array to display an additional project card */
 const PROJECTS = [
   {
     id: 1,
@@ -126,10 +118,7 @@ const PROJECTS = [
 
 const NAV = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
-/* ─────────────────────────────────────────
-   SOCIAL ICONS — inline SVG so no CDN
-   dependency and currentColor hover works
-───────────────────────────────────────── */
+/** Inline SVG icons for social links — uses currentColor for smooth hover transitions */
 const SOCIAL_ICONS = {
   github: (
     <svg viewBox="0 0 24 24" fill="currentColor" width="100%" height="100%" aria-hidden="true">
@@ -148,9 +137,7 @@ const SOCIAL_ICONS = {
   ),
 };
 
-/* ─────────────────────────────────────────
-   NAVBAR — uses your PNG logo
-───────────────────────────────────────── */
+/** Navbar — scroll-aware with active section highlighting via IntersectionObserver */
 function Navbar({ active }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -187,7 +174,7 @@ function Navbar({ active }) {
         transition: 'all 0.3s ease',
       }}
     >
-      {/* PNG logo — bold and clear in navbar */}
+      {/* Brand logo */}
       <a href="#home">
         <img
           src="/febson-logo.png"
@@ -225,7 +212,7 @@ function Navbar({ active }) {
         ))}
       </div>
 
-      {/* Hire Me — scrolls to contact form */}
+      {/* CTA button */}
       <a
         href="#contact"
         style={{
@@ -253,9 +240,7 @@ function Navbar({ active }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   HERO
-───────────────────────────────────────── */
+/** Hero section — typing animation, social links and floating code snippet */
 function Hero() {
   const [typed, setTyped] = useState('');
   const [ti, setTi] = useState(0);
@@ -508,7 +493,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* Floating code snippet — desktop only */}
+      {/* Decorative code snippet — visible on desktop only */}
       <div
         className="flt hide-lg"
         style={{
@@ -555,9 +540,7 @@ function Hero() {
   );
 }
 
-/* ─────────────────────────────────────────
-   ABOUT — MSc year fixed to 2026, no dashes
-───────────────────────────────────────── */
+/** About section — personal bio, education and stats */
 function About() {
   return (
     <section id="about" className="sp" style={{ padding: '100px 8%' }}>
@@ -729,9 +712,7 @@ function About() {
   );
 }
 
-/* ─────────────────────────────────────────
-   SKILLS — no comment text underneath
-───────────────────────────────────────── */
+/** Skills section — renders technology cards from the SKILLS array */
 function Skills() {
   return (
     <section
@@ -820,11 +801,7 @@ function SkillCard({ skill: s }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   PROJECTS — hardcoded, no public add/delete
-   Only you can add projects by editing the
-   PROJECTS array at the top of this file
-───────────────────────────────────────── */
+/** Projects section — renders project cards from the PROJECTS array */
 function Projects() {
   return (
     <section id="projects" className="sp" style={{ padding: '100px 8%' }}>
@@ -992,17 +969,10 @@ function ProjectCard({ p }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   CONTACT — using Formspree to deliver
-   messages directly to your email inbox.
-   Steps to activate:
-   1. Go to https://formspree.io and sign up free
-   2. Create a new form and copy your form ID
-   3. Replace "YOUR_FORM_ID" below with it
-───────────────────────────────────────── */
+/** Contact section — form submissions handled via Formspree */
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
 
   const send = async () => {
     if (!form.name || !form.email || !form.message) return;
@@ -1230,9 +1200,7 @@ function Contact() {
   );
 }
 
-/* ─────────────────────────────────────────
-   FOOTER
-───────────────────────────────────────── */
+/** Footer — brand logo, copyright and social links */
 function Footer() {
   return (
     <footer style={{ padding: '28px 8%', borderTop: '1px solid #0f1e33' }}>
@@ -1274,11 +1242,9 @@ function Footer() {
   );
 }
 
-/* ─────────────────────────────────────────
-   HELPERS
-───────────────────────────────────────── */
+/** Shared utility components */
 
-/* Reusable social icon+text link used in Hero and Footer */
+/** SocialLink — icon + label anchor used in the Hero and Footer */
 function SocialLink({ label, href, icon, small }) {
   const [hov, setHov] = useState(false);
   const dim = small ? 15 : 20;
@@ -1375,9 +1341,7 @@ function Inp({ value, onChange, placeholder }) {
   );
 }
 
-/* ─────────────────────────────────────────
-   APP ROOT
-───────────────────────────────────────── */
+/** App — root component, composes all sections and manages active nav state */
 export default function App() {
   const [active, setActive] = useState('home');
 
