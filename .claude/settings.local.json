@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\samso\\\\codex-review\\\\public\")",
+      "Bash(dir \"C:\\\\Users\\\\samso\\\\codex-review\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npm)",
+      "Bash(where node)",
+      "Bash(timeout /t 5 /nobreak)",
+      "Bash(start /b cmd /c \"npm run dev -- --port 5173 > C:\\\\Users\\\\samso\\\\AppData\\\\Local\\\\Temp\\\\vite-out.txt 2>&1\")",
+      "Bash(ping -n 6 127.0.0.)",
+      "Bash(npm run dev -- --port 5173)",
+      "Bash(del \"C:\\\\Users\\\\samso\\\\codex-review\\\\public\\\\febson-logo.svg\")",
+      "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(pip install Pillow)",
+      "Bash(python -c \":*)",
+      "Bash(pip install numpy)",
+      "Bash(pip install numpy --quiet)",
+      "Bash(python -c \"import numpy; print\\(''numpy'', numpy.__version__\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)"
+    ]
+  }
+}

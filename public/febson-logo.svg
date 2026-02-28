@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" width="320" height="68">
+  <defs>
+    <!-- Icon background gradient: dark navy top-left → near-black bottom-right -->
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e3f7a"/>
+      <stop offset="100%" stop-color="#06111f"/>
+    </linearGradient>
+    <!-- Shine overlay for glass effect on top half -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#5bc8ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#38bdf8"  stop-opacity="0"/>
+    </linearGradient>
+    <!-- Subtle border glow -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#3a90d8"/>
+      <stop offset="100%" stop-color="#0e4a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── ICON BOX ───────────────────────────────────── -->
+  <!-- Main fill -->
+  <rect x="2" y="2" width="64" height="64" rx="14" fill="url(#iconBg)"/>
+  <!-- Glass shine on upper half -->
+  <rect x="2" y="2" width="64" height="32" rx="14" fill="url(#shine)"/>
+  <!-- Border -->
+  <rect x="2" y="2" width="64" height="64" rx="14" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- FD letters -->
+  <text
+    x="34" y="47"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="31"
+    font-weight="900"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="-2"
+  >FD</text>
+
+  <!-- Cyan accent bar at bottom of icon -->
+  <rect x="14" y="59" width="40" height="2.5" rx="1.25" fill="#38bdf8" opacity="0.85"/>
+
+  <!-- ── BRAND TEXT ──────────────────────────────────── -->
+  <!-- "Febson" — bold white -->
+  <text
+    x="84" y="46"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="31"
+    font-weight="900"
+    fill="white"
+    letter-spacing="-0.5"
+  >Febson</text>
+
+  <!-- ".Dev" — cyan -->
+  <text
+    x="224" y="46"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="31"
+    font-weight="900"
+    fill="#38bdf8"
+    letter-spacing="-0.5"
+  >.Dev</text>
+</svg>
