@@ -37,7 +37,7 @@ const G = () => (
       .hero-btns{flex-direction:column!important}
       .skills-grid{grid-template-columns:repeat(3,1fr)!important}
       .proj-grid{grid-template-columns:1fr!important}
-      .contact-row{flex-direction:column!important;align-items:flex-start!important}
+      .contact-row{flex-direction:column!important;align-items:center!important;text-align:center!important}
       .footer-inner{flex-direction:column!important;text-align:center!important;gap:12px!important}
       .about-cards{grid-template-columns:1fr 1fr!important}
       .sp{padding:70px 6%!important}
@@ -1255,7 +1255,7 @@ function Footer() {
           style={{
             fontFamily: "'DM Mono',monospace",
             fontSize: 11,
-            color: '#1e3a5f',
+            color: '#7a9cbf',
           }}
         >
           © 2026 Febson.Dev · Built by Samson Febaide
@@ -1295,7 +1295,7 @@ function SocialLink({ label, href, icon, small }) {
         fontSize: small ? 12 : 14,
         fontWeight: 700,
         letterSpacing: '0.04em',
-        color: hov ? '#38bdf8' : (small ? '#8899b0' : '#8899b0'),
+        color: hov ? '#38bdf8' : (small ? '#a8c0d6' : '#a8c0d6'),
         transition: 'color 0.2s',
         textDecoration: 'none',
       }}
