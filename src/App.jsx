@@ -98,21 +98,12 @@ const SKILLS = [
 const PROJECTS = [
   {
     id: 1,
-    emoji: '🔍',
-    title: 'AI Code Review Tool',
-    desc: 'A code review platform powered by AI that checks your code for bugs, security issues, performance problems and style errors. It gives you a score, a grade and clear suggestions on how to fix each issue.',
-    tags: ['React', 'Claude API', 'JavaScript'],
-    live: '',
-    github: '',
-  },
-  {
-    id: 2,
-    emoji: '💼',
-    title: 'Febson.Dev Portfolio',
-    desc: 'My personal portfolio website built from scratch with React. It features smooth animations, real technology logos, mobile-friendly design and a custom brand identity that represents who I am as a developer.',
-    tags: ['React', 'CSS', 'Responsive Design'],
-    live: '',
-    github: '',
+    emoji: '🌤',
+    title: 'WeatherNow',
+    desc: 'A real-time weather app that shows current conditions, a 5-day forecast, humidity, wind speed, pressure, visibility, sunrise and sunset for any city in the world. The background changes dynamically based on the weather.',
+    tags: ['React', 'OpenWeather API', 'Vite'],
+    live: 'https://weather-now-plum-seven.vercel.app',
+    github: 'https://github.com/Febson1590/WeatherNow',
   },
 ];
 
